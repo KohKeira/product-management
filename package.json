@@ -1,0 +1,19 @@
+{
+  "name": "e_commerce",
+  "version": "1.0.0",
+  "description": "E-commerce website that displays product information for administrator to add, update and delete products",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Keira",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.8.0"
+  },
+  "devDependencies": {},
+  "keywords": []
+}

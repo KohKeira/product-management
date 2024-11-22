@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <script src="./js/login.js"></script>
+  </head>
+  <body>
+    <div class="logoName">
+      <img src="./Images/Logo.png" alt="Logo" width="130" height="130" />
+      <div class="typewriter">
+        <h1>Digital Sage</h1>
+      </div>
+    </div>
+
+    <form method="post" id="loginForm" onsubmit="login()">
+      <div class="profile">
+        <i class="fi fi-rr-user"></i>
+        <h1>Admin</h1>
+      </div>
+
+      <div class="inputContainer">
+        <i class="fi fi-rr-lock"></i>
+        <input type="password" id="password" placeholder="Password" required />
+      </div>
+      <button type="submit" id="loginButton">Login</button>
+    </form>
+  </body>
+</html>

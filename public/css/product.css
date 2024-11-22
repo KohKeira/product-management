@@ -1,0 +1,111 @@
+a {
+  color: black;
+}
+a:hover {
+  color: #cfb970;
+}
+.productSection {
+  width: 50%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.productSection .links a {
+  margin-right: 20px;
+}
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+#productImage {
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  padding-bottom: 20px;
+}
+.productDetails {
+  margin-left: 40px;
+  width: 60%;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  margin: 10px 10px 10px 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Georgian", Times, serif;
+  padding: 3px 5px;
+}
+#viewProductnp select {
+  appearance: none;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+.wordCount {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  font-size: 12px;
+}
+.actions {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  width: 100%;
+}
+.productSection button,
+#file-input-label {
+  font-size: 16px;
+  padding: 2px 10px;
+  margin: 5px 0px 5px 15px;
+  border-radius: 5px;
+  border: 1px black solid;
+  background-color: #eeeeee;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.productSection button:hover,
+#file-input-label:hover {
+  background-color: #cfb970;
+  cursor: pointer;
+}
+.imgInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.imgInput input[type="text"] {
+  width: 100%;
+  padding-right: 180px;
+  margin-right: 0;
+}
+
+.imgOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: absolute;
+  right: 5px;
+}
+
+#file-input {
+  display: none;
+}
+
+#file-input-label {
+  margin-left: 5px;
+}

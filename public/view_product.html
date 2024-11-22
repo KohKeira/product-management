@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Product</title>
+    <link rel="stylesheet" href="./css/navigation.css" />
+    <link rel="stylesheet" href="./css/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <script src="./js/product.js"></script>
+    <script src="./js/category.js"></script>
+    <script>
+      function start() {
+        getCategoryData(updateSelectCategory);
+        loadProductDetails("view");
+      }
+    </script>
+  </head>
+  <body onload="start()">
+    <nav>
+      <a href="./e_commerce.html" id="home">
+        <img
+          src="./Images/Logo.png"
+          alt="Digital Sage"
+          id="logo"
+          width="50"
+          height="50"
+        />
+        <h1>Digital Sage</h1>
+      </a>
+      <div id="search">
+        <input
+          type="text"
+          name="search"
+          id="searchInput"
+          placeholder="Search here..."
+          onkeydown="key_down(event)"
+        />
+        <button type="button" onclick="search()" title="search">
+          <i class="fi fi-rr-search"></i>
+        </button>
+      </div>
+      <div class="dropdown">
+        <button><i class="fi fi-rr-user"></i></button>
+        <div class="dropdown-options">
+          <p>Admin</p>
+          <a href="./login.html">Log Out</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="productSection">
+      <div class="links">
+        <a href="./e_commerce.html">View All Products</a>
+        <a href="" id="categoryLink"></a>
+      </div>
+
+      <h1>View Product Information</h1>
+      <div class="product">
+        <div class="productImageDiv">
+          <img id="productImage" alt="Image of Product" />
+        </div>
+        <div class="productDetails">
+          <form id="viewProduct">
+            <input type="text" name="id" id="id" hidden />
+            <div class="input">
+              <label for="name">Name: </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                maxlength="100"
+                inert
+                required
+              />
+            </div>
+
+            <div class="input">
+              <label for="description">Description: </label>
+              <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="5"
+                maxlength="200"
+                inert
+                required
+              ></textarea>
+            </div>
+            <label for="category">Category: </label>
+            <select name="category" id="category" inert></select>
+            <label for="price">Price: </label>
+            <input
+              type="number"
+              name="price"
+              id="price"
+              step="0.01"
+              max="99999999.99"
+              inert
+              required
+            />
+            <div class="input">
+              <label for="imagePath">Image Path: </label>
+              <div class="imgInput">
+                <input
+                  type="text"
+                  name="imagePath"
+                  id="imagePath"
+                  value="./Images/"
+                  inert
+                  required
+                />
+              </div>
+            </div>
+            <div class="actions">
+              <button type="button" onclick="edit()" title="Edit">Edit</button>
+              <button type="button" onclick="deleteProduct()" title="Delete">
+                Delete
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

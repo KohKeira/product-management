@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Sage</title>
+    <link rel="stylesheet" href="./css/navigation.css" />
+    <link rel="stylesheet" href="./css/feature_product.css" />
+    <link rel="stylesheet" href="./css/category.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <script src="./js/category.js"></script>
+    <script src="./js/feature_product.js"></script>
+    <script src="./js/product.js"></script>
+    <script>
+      function start() {
+        getCategoryData(insertCategoryData);
+        loadProducts();
+        jumpTop();
+      }
+    </script>
+  </head>
+  <body onload="start()">
+    <div class="mainContent">
+      <nav>
+        <a href="./e_commerce.html" id="home">
+          <img
+            src="./Images/Logo.png"
+            alt="Digital Sage"
+            id="logo"
+            width="50"
+            height="50"
+          />
+          <h1>Digital Sage</h1>
+        </a>
+        <div id="search">
+          <input
+            type="text"
+            name="search"
+            id="searchInput"
+            placeholder="Search here..."
+            onkeydown="key_down(event)"
+          />
+          <button type="button" onclick="search()" title="search">
+            <i class="fi fi-rr-search"></i>
+          </button>
+        </div>
+        <div class="dropdown">
+          <button><i class="fi fi-rr-user"></i></button>
+          <div class="dropdown-options">
+            <p>Admin</p>
+            <a href="./login.html">Log Out</a>
+          </div>
+        </div>
+      </nav>
+
+      <button type="button" onclick="goToTop()" id="goTop" title="goToTop">
+        <i class="fi fi-rr-chevron-double-up"></i>
+      </button>
+
+      <div id="categoryGrid"></div>
+      <div id="noProduct"></div>
+      <a href="./add_product.html" class="addProductLink">
+        <div id="addProduct">
+          <i class="fi fi-rr-add"></i>
+          <h2>Add Product</h2>
+        </div>
+      </a>
+      <div id="productsDisplay"></div>
+    </div>
+
+    <footer>Credits: Images by Freepik, Icons by Flaticons</footer>
+  </body>
+</html>
